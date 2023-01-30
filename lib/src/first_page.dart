@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:overlay_all_app/src/next_page.dart';
 import 'package:overlay_all_app/src/overlay_screen.dart';
 
-class FirstPage extends StatefulWidget {
-  const FirstPage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<FirstPage> createState() => _FirstPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     // Create an instance of OverlayScreen
