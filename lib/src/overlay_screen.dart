@@ -5,10 +5,11 @@ class OverlayScreen {
   /// Declared [overlayEntrys] as List<OverlayEntry> because we might have
   /// more than one Overlay on the screen, so we keep it on a list and remove all at once
   BuildContext _context;
-  OverlayState? overlayState;
-  List<OverlayEntry>? overlayEntrys;
+  static OverlayState? overlayState;
+  static List<OverlayEntry>? overlayEntrys;
 
   void closeAll() {
+    print(overlayEntrys?.length);
     for (final overlay in overlayEntrys ?? <OverlayEntry>[]) {
       overlay.remove();
     }
@@ -24,12 +25,18 @@ class OverlayScreen {
       ),
     );
 
-    overlayState?.insert(overlayEntrys!.last);
+    if (overlayEntrys != null && overlayEntrys?.isNotEmpty == true) {
+      overlayState?.insert(overlayEntrys!.last);
+    }
   }
 
   OverlayScreen._create(this._context) {
-    overlayState = Overlay.of(_context);
-    overlayEntrys = [];
+    print(overlayState);
+    if (overlayState == null) {
+      overlayState = Overlay.of(_context);
+      overlayEntrys = [];
+      print('creating');
+    }
   }
 
   factory OverlayScreen.of(BuildContext context) {

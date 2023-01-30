@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:overlay_all_app/main.dart';
 import 'package:overlay_all_app/src/next_page.dart';
 import 'package:overlay_all_app/src/overlay_screen.dart';
 
@@ -7,9 +8,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Create an instance of OverlayScreen
-    final overlayScreen = OverlayScreen.of(context);
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
@@ -21,7 +19,7 @@ class HomePage extends StatelessWidget {
             TextButton(
               onPressed: () {
                 // display the overlay
-                overlayScreen.show();
+                overlayScreen?.show();
               },
               child: const Text('Display Overlay'),
             ),
@@ -41,7 +39,7 @@ class HomePage extends StatelessWidget {
             TextButton(
               onPressed: () {
                 // removed all overlays on the screen
-                overlayScreen.closeAll();
+                overlayScreen?.closeAll();
               },
               child: const Text('Close Overlay'),
             ),
