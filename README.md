@@ -1,16 +1,12 @@
-# overlay_all_app
+# Flutter working with Overlay
 
-A new Flutter project.
+This is a simple flutter project to show how to display an overlay during app usage, this overlay can be removed once user click on "remove overlay" button
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+No lib were used to work with overlay since it come with Flutte sdk
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://user-images.githubusercontent.com/67912928/215545590-3745d489-a90f-4062-95fe-99707ed375c7.mov
+
