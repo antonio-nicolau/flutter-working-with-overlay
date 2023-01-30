@@ -9,7 +9,6 @@ class OverlayScreen {
   static List<OverlayEntry>? overlayEntrys;
 
   void closeAll() {
-    print(overlayEntrys?.length);
     for (final overlay in overlayEntrys ?? <OverlayEntry>[]) {
       overlay.remove();
     }
@@ -31,11 +30,9 @@ class OverlayScreen {
   }
 
   OverlayScreen._create(this._context) {
-    print(overlayState);
     if (overlayState == null) {
       overlayState = Overlay.of(_context);
       overlayEntrys = [];
-      print('creating');
     }
   }
 
