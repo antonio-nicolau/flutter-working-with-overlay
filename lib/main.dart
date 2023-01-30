@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           initialEntries: [
             OverlayEntry(
               builder: (context) {
+                // Create an instance of [OverlayScreen]
                 overlayScreen = OverlayScreen.of(context);
                 return child ?? const SizedBox();
               },
